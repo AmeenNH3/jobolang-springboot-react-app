@@ -1,0 +1,42 @@
+/* 
+Black - #1B1B1E
+Standout - #96031A
+Bg - #69A2B0
+mainwhite #FBFFFE
+textwhite small #F6F6F6
+
+eclipse
+position: absolute;
+width: 706px;
+height: 559px;
+left: 994px;
+top: -223px;
+
+background: #87D0E2;
+filter: blur(250px);
+
+bar
+position: absolute;
+width: 35px;
+height: 921px;
+left: -10px;
+top: 0px;
+
+background: #080708;
+opacity: 0.2;
+filter: blur(20px);
+
+
+bar-top
+
+position: absolute;
+width: 55.53px;
+height: 1449.08px;
+left: 1440.21px;
+top: -30.48px;
+
+background: #080708;
+opacity: 0.2;
+filter: blur(20px);
+transform: rotate(90deg);
+*/
