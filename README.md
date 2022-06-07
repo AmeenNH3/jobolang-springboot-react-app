@@ -4,4 +4,5 @@
   
   
  Check out live demo!
- <a href="https://jobolang.herokuapp.com/">View Demo</a>
+Note: The app is hosted on heruko, initial page loading might take about 30 seconds for heruko front-end app to start up from sleep and first request to backend server might take 30 seconds for backend-server to start up from sleep, thank you for you patience.
+<a href="https://jobolang.herokuapp.com/">View Demo</a>
