@@ -1,6 +1,6 @@
 <h1>Jobolang </h1>
   
-<p>A full stack app built with spring boot and react for managing our ever growing job applications </p>
+<p>A full stack app built with spring boot and react for managing our ever growing job applications. </p>
   
   
  Check out live demo!
