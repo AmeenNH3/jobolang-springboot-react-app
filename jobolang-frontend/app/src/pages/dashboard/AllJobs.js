@@ -7,7 +7,7 @@ import SearchContainer from "../../components/SearchContainer";
 function AllJobs() {
   return (
     <Wrapper>
-      <SearchContainer></SearchContainer>
+      {/* <SearchContainer></SearchContainer> */}
       <JobsContainer></JobsContainer>
     </Wrapper>
   );
