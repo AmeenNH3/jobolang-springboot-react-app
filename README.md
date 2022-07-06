@@ -16,3 +16,13 @@ Tech stack -–> React, React Hooks, Redux Toolkit, Axios, Styled Components, Re
 <p>I spent considerable time on designing the user interface as well, so please check out the below behance link and leave a appreciation if you liked it and provide any suggestions for improvement</p>
 <a href="https://www.behance.net/gallery/143349711/Jobolang-Application-Landing-Page" target=”_blank”>View UI Design</a>
  
+ </br>
+ <h1>
+ Screenshots of the website
+ </h1>
+ <img src="./screenshots/image-1.jpg">
+ <img src="./screenshots/image-2.jpg">
+ <img src="./screenshots/image-3.jpg">
+ <img src="./screenshots/image-4.jpg">
+ <img src="./screenshots/image-5.jpg">
+ <img src="./screenshots/image-6.jpg">
