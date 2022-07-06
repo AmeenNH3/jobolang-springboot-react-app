@@ -20,9 +20,9 @@ Tech stack -–> React, React Hooks, Redux Toolkit, Axios, Styled Components, Re
  <h1>
  Screenshots of the website
  </h1>
- <img src="./screenshots/image-1.jpg">
- <img src="./screenshots/image-2.jpg">
- <img src="./screenshots/image-3.jpg">
- <img src="./screenshots/image-4.jpg">
- <img src="./screenshots/image-5.jpg">
- <img src="./screenshots/image-6.jpg">
+ <img src="./screenshots/image-1.jpg" alt="Image didn't load ! Right click and open image in new tab">
+ <img src="./screenshots/image-2.jpg"  alt="Image didn't load ! Right click and open image in new tab">
+ <img src="./screenshots/image-3.jpg"  alt="Image didn't load ! Right click and open image in new tab">
+ <img src="./screenshots/image-4.jpg"  alt="Image didn't load ! Right click and open image in new tab">
+ <img src="./screenshots/image-5.jpg"  alt="Image didn't load ! Right click and open image in new tab">
+ <img src="./screenshots/image-6.jpg"  alt="Image didn't load ! Right click and open image in new tab">
