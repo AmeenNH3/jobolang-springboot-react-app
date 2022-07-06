@@ -15,7 +15,7 @@ import java.util.function.Function;
 @Service
 public class JwtUtil {
 
-    @Value("${jobalang.app.secret}")
+    @Value("${jobolang.app.secret}")
     private String jwtSecret;
 
 

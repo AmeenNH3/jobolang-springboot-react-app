@@ -91,17 +91,17 @@ h5 {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #7cc5e4;
+  background: #626363;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #50acd3;
+  background: #cfcfcf;
   border-radius: 100px;
 }
 

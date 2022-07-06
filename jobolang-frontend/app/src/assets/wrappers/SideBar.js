@@ -13,6 +13,7 @@ const Wrapper = styled.div.attrs((props) => ({
   padding-bottom: 5rem;
   z-index: 100;
   height: 90vh;
+  overflow-y: auto;
   .sidebar-logo-container {
     align-self: flex-start;
     padding-top: 2rem;

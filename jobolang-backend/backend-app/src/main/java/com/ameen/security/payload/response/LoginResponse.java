@@ -1,9 +1,9 @@
-package com.ameen.security.model;
+package com.ameen.security.payload.response;
 
 import java.io.Serializable;
 
 
-public class AuthenticationResponse implements Serializable {
+public class LoginResponse implements Serializable {
 
     private String token;
     private String username;
@@ -11,7 +11,7 @@ public class AuthenticationResponse implements Serializable {
     private String fullName = "fullName";
     private String location = "my city";
 
-    public AuthenticationResponse(String token, String username, String email, String fullName, String location) {
+    public LoginResponse(String token, String username, String email, String fullName, String location) {
         this.token = token;
         this.username = username;
         this.email = email;
@@ -19,7 +19,7 @@ public class AuthenticationResponse implements Serializable {
         this.location = location;
     }
 
-    public  AuthenticationResponse(String token){
+    public LoginResponse(String token){
         this.token = token;
     }
 

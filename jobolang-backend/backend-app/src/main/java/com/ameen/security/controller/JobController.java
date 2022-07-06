@@ -3,8 +3,8 @@ package com.ameen.security.controller;
 
 
 import com.ameen.security.model.Job;
-import com.ameen.security.model.MonthlyApplications;
-import com.ameen.security.model.Stats;
+import com.ameen.security.dto.MonthlyApplications;
+import com.ameen.security.dto.Stats;
 import com.ameen.security.repository.JobRepo;
 import com.ameen.security.util.JwtUtil;
 import com.mongodb.client.result.DeleteResult;
@@ -29,7 +29,6 @@ public class JobController {
 
     @Autowired
     private JobRepo repo;
-
 
     @Autowired
     private JwtUtil jwtUtil;

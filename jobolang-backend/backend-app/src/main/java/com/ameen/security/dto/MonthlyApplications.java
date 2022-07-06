@@ -1,4 +1,4 @@
-package com.ameen.security.model;
+package com.ameen.security.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

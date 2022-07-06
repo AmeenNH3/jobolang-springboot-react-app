@@ -1,0 +1,13 @@
+server:
+  port: 8090
+
+spring:
+  data:
+    mongodb:
+      database: JobolangV1
+      host: localhost
+      port: 27017
+
+jobolang:
+  app:
+    secret: ameen12346

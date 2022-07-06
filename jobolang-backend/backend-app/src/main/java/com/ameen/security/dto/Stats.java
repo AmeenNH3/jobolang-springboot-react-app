@@ -1,5 +1,6 @@
-package com.ameen.security.model;
+package com.ameen.security.dto;
 
+import com.ameen.security.dto.MonthlyApplications;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

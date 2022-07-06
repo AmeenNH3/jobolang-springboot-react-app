@@ -1,8 +1,8 @@
 package com.ameen.security.controller;
 
-import com.ameen.security.model.AuthenticationRequest;
-import com.ameen.security.model.AuthenticationResponse;
-import com.ameen.security.model.RegisterUser;
+import com.ameen.security.payload.request.LoginRequest;
+import com.ameen.security.payload.response.LoginResponse;
+import com.ameen.security.payload.request.RegisterRequest;
 import com.ameen.security.model.User;
 import com.ameen.security.repository.UserRepo;
 import com.ameen.security.service.MyUserDetailsService;
@@ -10,13 +10,11 @@ import com.ameen.security.service.UserDetailsImpl;
 import com.ameen.security.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoOperations;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -50,18 +48,18 @@ public class UserController {
     MongoOperations mongoOperations;
 
     @PostMapping("/login")
-    public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest) throws Exception{
+    public ResponseEntity<?> createAuthenticationToken(@RequestBody LoginRequest loginRequest) throws Exception{
         try{
 
-
+            
             Authentication authentication = authenticationManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(), authenticationRequest.getPassword(), new ArrayList<>()));
+                    new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword(), new ArrayList<>()));
             SecurityContextHolder.getContext().setAuthentication(authentication);
-            final UserDetailsImpl userDetails = (UserDetailsImpl) userDetailsService.loadUserByUsername(authenticationRequest.getUsername());
+            final UserDetailsImpl userDetails = (UserDetailsImpl) userDetailsService.loadUserByUsername(loginRequest.getUsername());
             final String jwt = jwtUtil.generateToken(userDetails);
 
-            AuthenticationResponse authenticationResponse = new AuthenticationResponse(jwt,userDetails.getUsername(),userDetails.getEmail(),userDetails.getFullName(), userDetails.getLocation());
-            return ResponseEntity.ok(authenticationResponse);
+            LoginResponse loginResponse = new LoginResponse(jwt,userDetails.getUsername(),userDetails.getEmail(),userDetails.getFullName(), userDetails.getLocation());
+            return ResponseEntity.ok(loginResponse);
         }
         catch (Exception e){
             return ResponseEntity.badRequest().body("Error, failed to login !");
@@ -69,18 +67,18 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<?> registerUser(@RequestBody RegisterUser registerUser){
+    public ResponseEntity<?> registerUser(@RequestBody RegisterRequest registerRequest){
         try{
-            if(registerUser.getUsername().length() < 4 || registerUser.getPassword().length() < 6){
+            if(registerRequest.getUsername().length() < 4 || registerRequest.getPassword().length() < 6){
                 return  ResponseEntity.badRequest().body("Username should be greater than 4 characters and password should be more than 6 characters long");
             }
-            if(userRepo.existsByUsername(registerUser.getUsername()) || userRepo.existsByEmail(registerUser.getEmail())){
+            if(userRepo.existsByUsername(registerRequest.getUsername()) || userRepo.existsByEmail(registerRequest.getEmail())){
                 return  ResponseEntity.badRequest().body("Username or email already exists");
             }
             User user  = new User();
-            user.setUsername(registerUser.getUsername());
-            user.setPassword(encoder.encode(registerUser.getPassword()));
-            user.setEmail(registerUser.getEmail());
+            user.setUsername(registerRequest.getUsername());
+            user.setPassword(encoder.encode(registerRequest.getPassword()));
+            user.setEmail(registerRequest.getEmail());
             userRepo.save(user);
             return ResponseEntity.ok("Registered Successfully");
         }

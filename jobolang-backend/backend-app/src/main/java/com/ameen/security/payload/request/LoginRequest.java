@@ -1,22 +1,18 @@
-package com.ameen.security.model;
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+package com.ameen.security.payload.request;
 
 import java.io.Serializable;
 
 
-public class AuthenticationRequest implements Serializable {
+public class LoginRequest implements Serializable {
     private String username;
     private String password;
 
-    public AuthenticationRequest()
+    public LoginRequest()
     {
 
     }
 
-    public AuthenticationRequest(String username, String password) {
+    public LoginRequest(String username, String password) {
         this.setUsername(username);
         this.setPassword(password);
     }

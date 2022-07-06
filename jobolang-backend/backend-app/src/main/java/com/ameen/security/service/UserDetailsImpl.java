@@ -1,13 +1,9 @@
 package com.ameen.security.service;
 
 import com.ameen.security.model.User;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.stereotype.Service;
 
 import java.util.*;
 
@@ -29,9 +25,7 @@ public class UserDetailsImpl implements UserDetails {
         this.fullName = fullName;
         this.location = location;
         this.authorities = authorities;
-
     }
-
 
     public static UserDetailsImpl build(User user) {
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
@@ -53,9 +47,6 @@ public class UserDetailsImpl implements UserDetails {
     public void setUsername(String username) {
         this.username = username;
     }
-
-
-
 
     @Override
     public String getPassword() {
