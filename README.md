@@ -9,6 +9,7 @@ Tech stack -–> React, React Hooks, Redux Toolkit, Axios, Styled Components, Re
 <p>Check out live demo!</p>
 <p> Note: The app is hosted on heruko, initial page loading might take about 30 seconds for heruko front-end app to start up from sleep and first request to backend server might take 30 seconds for backend-server to start up from sleep, thank you for your patience.</p>
 <a href="https://jobolang.herokuapp.com/" target=”_blank”>View Demo</a>
+<p>Unfortunately heroku no longer has free tier plan, so the demo link won't work. I'm working to move it to a free alternative</p>
 <p></p>
 <p></p>
 <p>I'm working on improving the app and adding additional functionalities. I'll soon be adding a detailed readme. </p>
