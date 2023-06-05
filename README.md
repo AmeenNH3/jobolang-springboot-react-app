@@ -13,7 +13,7 @@
             offers received, and applications rejected.</li>
         <li><strong>Insights & Analytics:</strong> The application generates insights based on historical data, helping users identify successful strategies 
             and areas for improvement.</li>
-        <li><strong>Resume Improvement Suggestions:</strong> Jobolang can suggest potential improvements for resumes based on successful applications.</li>
+<!--         <li><strong>Resume Improvement Suggestions:</strong> Jobolang can suggest potential improvements for resumes based on successful applications.</li> -->
     </ul>
     <h2>Technology Stack</h2>
     <p>
